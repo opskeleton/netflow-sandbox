@@ -1,5 +1,8 @@
 group{ 'puppet': ensure  => present }
 
-node 'netflow.local' {
+node default {
 
+  package{'nfsen':
+    ensure  => present
+  }
 }

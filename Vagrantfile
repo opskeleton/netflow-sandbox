@@ -8,18 +8,25 @@ Vagrant.configure("2") do |config|
   env ||= 'dev'
 
   config.vm.box = 'openbsd54_amd64' 
-  config.vm.network :public_network, :bridge => bridge
+  # config.vm.network :public_network, :bridge => bridge
+  config.vm.network :private_network, ip: "192.168.67.10", netmask: "255.255.255.0"
   config.vm.hostname = 'netflow.local'
+  config.vm.guest=:openbsd
+  config.vm.synced_folder ".", "/vagrant", :disabled => true
+  config.vm.synced_folder ".", "/vagrant", type: "nfs" 
 
   config.vm.provider :virtualbox do |vb|
     vb.customize ['modifyvm', :id, '--memory', 2048, '--cpus', 2]
   end
 
-  config.vm.provision :puppet do |puppet|
-    puppet.manifests_path = 'manifests'
-    puppet.manifest_file  = 'default.pp'
-    puppet.options = '--modulepath=/vagrant/modules:/vagrant/static-modules --hiera_config /vagrant/hiera_vagrant.yaml --environment=#{env}'
+  config.vm.provision "shell", inline: 'echo installpath=http://ftp3.usa.openbsd.org/pub/OpenBSD/5.4/packages/amd64/ > /etc/pkg.conf'
+  config.vm.provision "shell", inline: 'cd /vagrant && ./run.sh'
+  # config.vm.provision :puppet do |puppet|
+  #   puppet.manifests_path = 'manifests'
+  #   puppet.manifest_file  = 'default.pp'
+  #   puppet.options = '--modulepath=/vagrant/modules:/vagrant/static-modules --hiera_config /vagrant/hiera_vagrant.yaml --environment=#{env}'
 
-  end
+  #   puppet.nfs = true
+  # end
 
 end
