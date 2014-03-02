@@ -5,12 +5,12 @@ This project manages a sandbox for [netflow](url)
 
 This box uses NFS since openbsd does not support Virtualbox tools, you will need to:
 
- * Install local NFS server
+ * Install local NFS server:
 ```bash
-$ sudo apt-get install nfs-kernel-server nfs-common portmap.
+$ sudo apt-get install nfs-kernel-server nfs-common portmap
 ```
 
- * Expose NFS ports to the private network see [this](http://askubuntu.com/questions/103910/nfs-is-blocked-by-ufw-even-though-ports-are-opened)
+ * Expose NFS ports to the private network see [this](http://askubuntu.com/questions/103910/nfs-is-blocked-by-ufw-even-though-ports-are-opened).
 
  * Then you can proceed as usuaul:
 
@@ -22,7 +22,7 @@ $ sudo apt-get install nfs-kernel-server nfs-common portmap.
 
 # Copyright and license
 
-Copyright [2014] [First Last Name]
+Copyright [2014] [Ronen Narkis]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
