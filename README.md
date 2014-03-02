@@ -1,5 +1,5 @@
 # Intro 
-This project manages a sandbox for [netflow](url)
+This project manages a sandbox for [netflow](http://bsdly.blogspot.ca/2014/02/yes-you-too-can-be-evil-network.html)
 
 # Usage
 
