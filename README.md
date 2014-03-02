@@ -12,6 +12,8 @@ $ sudo apt-get install nfs-kernel-server nfs-common portmap.
 
  * Expose NFS ports to the private network see [this](http://askubuntu.com/questions/103910/nfs-is-blocked-by-ufw-even-though-ports-are-opened)
 
+ * Then you can proceed as usuaul:
+
 ```bash
   $ bundle install 
   $ librarian-puppet install 
