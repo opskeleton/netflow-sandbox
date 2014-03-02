@@ -20,6 +20,8 @@ $ sudo apt-get install nfs-kernel-server nfs-common portmap
   $ vagrant up
 ```
 
+The Openbsd box can be created via [this](https://github.com/narkisr/veewee/tree/master/templates/openbsd54_amd64) veewee template.
+
 # Copyright and license
 
 Copyright [2014] [Ronen Narkis]
