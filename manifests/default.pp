@@ -1,8 +1,6 @@
 group{ 'puppet': ensure  => present }
 
 node default {
-
-  package{'nfsen':
-    ensure  => present
-  }
+  include netflow
+  include base
 }
