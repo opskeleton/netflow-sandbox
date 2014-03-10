@@ -21,12 +21,4 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "shell", inline: 'echo installpath=http://ftp3.usa.openbsd.org/pub/OpenBSD/5.4/packages/amd64/ > /etc/pkg.conf'
   config.vm.provision "shell", inline: 'cd /vagrant && ./run.sh'
-  # config.vm.provision :puppet do |puppet|
-  #   puppet.manifests_path = 'manifests'
-  #   puppet.manifest_file  = 'default.pp'
-  #   puppet.options = '--modulepath=/vagrant/modules:/vagrant/static-modules --hiera_config /vagrant/hiera_vagrant.yaml --environment=#{env}'
-
-  #   puppet.nfs = true
-  # end
-
 end
