@@ -22,6 +22,14 @@ $ sudo apt-get install nfs-kernel-server nfs-common portmap
 
 The Openbsd box can be created via [this](https://github.com/narkisr/veewee/tree/master/templates/openbsd54_amd64) veewee template.
 
+Configuration is based upon:
+
+* http://sinaninyeri.blogspot.co.il/2013/02/openbsd-nfsen-install.html
+* http://meefirst.blogspot.co.il/2012/02/installing-nfsen-on-freebsd-9.html
+* http://mailman.theapt.org/pipermail/openbsd-newbies/2012-June/004545.html
+* http://bsdly.blogspot.co.il/
+* http://www.hautefeuille.eu/netflow-openbsd.html
+
 # Copyright and license
 
 Copyright [2014] [Ronen Narkis]
