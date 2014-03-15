@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
   env  = ENV['PUPPET_ENV']
   env ||= 'dev'
 
-  config.vm.box = 'openbsd54_amd64' 
+  config.vm.box = 'openbsd54_amd64_2' 
   # config.vm.network :public_network, :bridge => bridge
   config.vm.network :private_network, ip: "192.168.67.10", netmask: "255.255.255.0"
   config.vm.hostname = 'netflow.local'

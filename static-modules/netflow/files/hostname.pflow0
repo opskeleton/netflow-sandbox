@@ -1,0 +1,2 @@
+flowsrc 192.168.67.10 flowdst 192.168.67.10:9995
+pflowproto 9
